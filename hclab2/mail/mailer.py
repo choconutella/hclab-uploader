@@ -63,7 +63,7 @@ class Mailer:
       payload.set_payload(open(attachment,"rb").read())
 
       encoders.encode_base64(payload)
-      payload.add_header("Content-Disposition",f"attachment; filename={filename}")
+      payload.add_header("Content-Disposition",f"attachment; filename={filename}.pdf")
       message.attach(payload)
 
     # warped email message & attachment
